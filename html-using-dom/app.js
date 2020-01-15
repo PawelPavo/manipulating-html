@@ -84,17 +84,34 @@ document.addEventListener('DOMContentLoaded', function () {
     //----------------- Part 6 -------------------------------
 
     //Displays a list of names nested inside a 'ul', each name is wrapped with 'li'.
+
+    list = document.getElementsByTagName('ul')[0]
     let btnClick = document.getElementsByTagName('button')[0];
     let friends = ['Olivia', 'George', 'Isla', 'Noah', 'Emily', 'Charlie', 'Grace', 'Jacob', 'Ava', 'Ella'];
-    for (let i = 0; i < friends.length; i++) {
-        let name = friends[i];
-        let nameList = document.createElement('li');
-        let nameText = document.createTextNode(name);
-        list = document.getElementsByTagName('ul')[0]
-        btnClick.addEventListener('click', function () {
+    let i = 0;
+    btnClick.addEventListener('click', function () {
+        if (i < friends.length) {
+            let nameList = document.createElement('li');
+            let nameText = document.createTextNode(friends[i]);
             nameList.appendChild(nameText);
             list.appendChild(nameList);
-        });
-    }
+            i++;
+        }
+    })
+
+
+
+
+
+    // for (let i = 0; i < friends.length; i++) {
+    //     let name = friends[i];
+    //     let nameList = document.createElement('li');
+    //     let nameText = document.createTextNode(name);
+    //     list = document.getElementsByTagName('ul')[0]
+    //     btnClick.addEventListener('click', function () {
+    //         nameList.appendChild(nameText);
+    //         list.appendChild(nameList);
+    //     });
+    // }
 
 });

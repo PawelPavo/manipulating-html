@@ -45,24 +45,29 @@ $(document).ready(function () {
     //------------------Part 5 --------------------------------
 
     //Creates a button which when clicked it will display 'name' warapped in 'span' inside a 'div'
-
     $('body').append('<button id="btnName">Click for my name!</button>');
     $('body').append('<div id="nameDiv"></div>');
     $('#btnName').one('click', function () {
-        $('#nameDiv').append('<span></span>')
+        $('#nameDiv').append('<span>Pawel Jaskolski</span>')
 
     });
 
     //----------------- Part 6 -------------------------------
 
     //Displays a list of names nested inside a 'ul', each name is wrapped with 'li'.
-
+    
     let friends = ['Olivia', 'George', 'Isla', 'Noah', 'Emily', 'Charlie', 'Grace', 'Jacob', 'Ava', 'Ella'];
-
-    $('#btnFriend').on('click', function () {
-        for (let i = 0; i < friends.length; i++) {
-            $('ul').append('<li>' + friends[i] + '</li>')
-        }
+    let i = 0;
+    $('#btnFriend').on('click', function(){
+        if(i < friends.length) {
+            $('ul').append('<li>' + friends[i] + '</li>');
+            i++;
+        };
     });
-});
 
+    // $('#btnFriend').on('click', function () {
+    //     for (let i = 0; i < friends.length; i++) {
+    //         $('ul').append('<li>' + friends[i] + '</li>')
+    //     }
+    // });
+});
