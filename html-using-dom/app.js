@@ -98,11 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
             i++;
         }
     })
-
-
-
-
-
     // for (let i = 0; i < friends.length; i++) {
     //     let name = friends[i];
     //     let nameList = document.createElement('li');
